@@ -125,4 +125,14 @@
   .addBtn:hover {
     background-color: #bbb;
   }
+
+  .bg-footer, .custom-bg {
+
+    background-color: teal;
+  }
+
+  .custom-footer-bg{
+    height: 30px;
+  }
+
   
