@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
 
-    <title>We Would Like to Hear From You!</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous"
+        />
+    
+        <title>Pick & Trade</title>
+      </head>
+    
+
+
+
   <body>
     <header class="mt-0 header col-sm-12 bg-footer">
       <div>
         <h1>Pick & Trade</h1>
         <p>Level Up Your Closet</p>
       </div>
-  
+
       <div class="bg-dark">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <button
@@ -41,19 +46,19 @@
             <ul class="navbar-nav mr-auto">
               <li class="navbar-dark bg-dark nav-item">
                 <a class="nav-link" href="index.html"
-                  >Home <span class="sr-only">(current)</span
-                ></a>
+                  >Home <span class="sr-only">(current)</span></a
+                >
               </li>
               <li class="navbar-dark bg-dark nav-item">
                 <a class="nav-link" href="profile.html"
                   >Profile <span class="sr-only"></span
                 ></a>
               </li>
-  
-              <li class="navbar-dark bg-dark nav-item ">
+
+              <li class="navbar-dark bg-dark nav-item">
                 <a class="nav-link" href="contactUs.html"
-                  >About Us<span class="sr-only"></span></a
-                >
+                  >About Us<span class="sr-only"></span
+                ></a>
               </li>
             </ul>
           </div>
@@ -61,52 +66,110 @@
       </div>
     </header>
 
-    
-    <h1>Add An Item</h1>
+    <div class="row text-center">
+      <div class="col-sm-5 mt-4"></div>
+      <div class="mt-4">
+        <h2 class="card-title">Add An Item</h2>
+        <p class="card-text">PLEASE FILL THE REQUIRED FIELD*</p>
+      </div>
+    </div>
 
+    <div class="row">
+<div class="col-2">
+    
+</div>
+    <form class="col-sm-8 ">
+
+        
+      <div class="form-group">
+        
+        <label for="productName">Title*</label>
+        <input
+          type="text"
+          class="form-control"
+          id="productName"
+          placeholder="Enter item name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="productDescreption" class="mt-4">Product Description*</label>
+        <textarea
+          class="form-control"
+          id="productDescreption"
+          rows="3"
+          placeholder="Enter item description"
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="productDescreption" class="mt-4">Choose the category*</label>
+        <select class="form-control">
+          <option>Pants</option>
+          <option>Tops</option>
+          <option>Dress</option>
+          <option>Accessory</option>
+        </select>
+      </div>
+
+      <div class="row dotted col-sm-12 mt-5 ml-1 text-secondary">
+        <div class="form-group ">
+            <label for="choosePicture" class="mt-2 text-dark">Media*</label>
+            <input type="file" class="form-control-file" id="choosePicture" />
+          </div>
+
+    </div>
+      
+
+    <div class="row">
+
+        <div class="col-sm-5"><p></p></div>
+        <div class="col-sm-3">
+            <button type="submit" class="btn btn-info mt-5 mb-5 btnAdd">Add Item</button>
+    
+        </div>
+
+    </div>
+    
+      
+    </form>
+
+
+</div>
 
     <footer class="mt-0 footer bg-footer">
+      <div class="row bg-dark custom-footer-bg"></div>
 
+      <div class="row bg-footer">
+        <div class="col-sm-4">
+          <img src="/assets/logo.png" height="200px" width="200px" />
+        </div>
+        <div class="col-sm-4">
+          <br />
+          <p class="text-light font-weight-bold align-middle">
+            Pick & Trade Services
+          </p>
+          <a class="nav-link text-light" href="profile.html"
+            >Profile <span class="sr-only">(current)</span></a
+          >
 
-        <div class="row bg-dark custom-footer-bg">
+          <a class="nav-link text-light" href="requests.html"
+            >Requests <span class="sr-only">(current)</span></a
+          >
         </div>
-  
-  
-        <div class="row bg-footer">
-          <div class="col-sm-4">
-            <img src="/assets/logo.png" height="200px" width="200px" />
-          </div>
-          <div class="col-sm-4">
-            <br />
-            <p class="text-light font-weight-bold align-middle">
-              Pick & Trade Services
-            </p>
-            <a class="nav-link text-light" href="profile.html"
-              >Profile <span class="sr-only">(current)</span></a
-            >
-            
-            <a class="nav-link text-light" href="requests.html"
-              >Requests <span class="sr-only">(current)</span></a
-            >
-          </div>
-  
-          <div class="col-sm-4">
-            <br />
-            <br />
-            <br />
-            <br />
-            <a
-              href="contactUs.html"
-              class="text-light mb-3 font-weight-bold align-middle"
-              >About US</a
-            >
-          </div>
+
+        <div class="col-sm-4">
+          <br />
+          <br />
+          <br />
+          <br />
+          <a
+            href="contactUs.html"
+            class="text-light mb-3 font-weight-bold align-middle"
+            >About US</a
+          >
         </div>
-      </footer>
-  
-  
-        
-    </body>
-  </html>
-  
-    
+      </div>
+    </footer>
+  </body>
+</html>
