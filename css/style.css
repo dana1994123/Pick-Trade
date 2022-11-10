@@ -108,7 +108,7 @@
   }
   
   /* Style the "Add" button */
-  .addBtn {
+  /* .addBtn {
     padding: 10px;
     width: 25%;
     background: #d9d9d9;
@@ -121,18 +121,38 @@
     border-radius: 0;
     border: none;
   }
+   */
   
-  .addBtn:hover {
-    background-color: #bbb;
-  }
 
-  .bg-footer, .custom-bg {
-
+  .bg-footer, .custom-bg 
+  {
     background-color: teal;
   }
 
   .custom-footer-bg{
     height: 30px;
   }
+
+
+
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+
 
   
