@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body onload="loadSpecificProduct()">
 
   <header class="mt-0 header col-sm-12 bg-footer">
 
@@ -80,8 +80,8 @@
 
     <div class="col-3 ml-3">
 
-      <img class="card-img-top"
-        src="https://cdn.shopify.com/s/files/1/2639/7422/products/photo_6042037474231956897_y_1800x1800.jpg?v=1665963518"
+      <img class="card-img-top" id="productImg"
+        src="../assets/images.png"
         alt="Card image cap" />
 
     </div>
@@ -90,19 +90,21 @@
 
       <div class="row card card-title mt-3 p-3">
 
-        <h3>Malak Zipper Front Modest Coat | Navy </h3>
+        <h3 id="productTitle">Malak Zipper Front Modest Coat | Navy </h3>
 
       </div>
 
       <div class="row card card-body">
 
-        <p><b>300 points</b></p>
+        <p id="pPoint"><b>300 points</b></p>
 
-        <p>Effortlessly stylish and classic, the Malak Zipper Front Modest Coat is crafted from a sumptuously soft
+        <p id="productDescription">Effortlessly stylish and classic, the Malak Zipper Front Modest Coat is crafted from a sumptuously soft
           fabrication.<br> In a zipper front silhouette, it is accented with an adjustable waist design for a feminine
           finish. Excellent layered over sophisticated separates, it will become a wardrobe go-to for the new season.
         </p>
 
+
+        <!-- add a request to this product using the profile information -->
         <a href="newItemToAdd.html" class="btn btn-outline-info">Make a Request</a>
 
       </div>
@@ -131,7 +133,7 @@
 
           <div class="form-group">
 
-            <label for="exampleFormControlTextarea1">Example textarea</label>
+            <label class="mt-3"for="exampleFormControlTextarea1"> More Details</label>
 
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 
@@ -195,7 +197,7 @@
 
   </footer>
 
-  <script src="javascript/script.js"></script>
+  <script src="../javascript/productscript.js"></script>
 
 </body>
 
