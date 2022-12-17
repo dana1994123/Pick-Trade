@@ -76,8 +76,10 @@
 
   </header>
 
-  <div class="nav nav-pills">
-
+  <div class="nav nav-pills" >
+    <div class="row col-sm-12 p-4 align-middle">
+      <a id="saveBtn" class="btn btn-info m-2">Save</a>
+    </div>
     <!-- profile main info -->
 
     <div class="colom col-sm-3 ml-5">
@@ -92,17 +94,11 @@
 
           <div class="card-body">
 
-            <h5 class="card-title">Hebat</h5>
-
-            <p class="card-text">
-
-              Love Levelling up my closet and help others as well. Your dream
-
-              is similar to my display window.
-
-            </p>
-
-            <a href="listing.html" class="btn btn-info ml-2">Edit Profile</a>
+            <input id ="profileName"class="card-title" value="Hebat" disabled>
+            <br>
+            <textarea id ="profileBio" class="form-control" id="exampleFormControlTextarea1" rows="3" value="Love Levelling up my closet and help others as well. Your dream is similar to my display window." disabled></textarea>
+            <br>
+            <a id="editProfileBtn" class="btn btn-info ml-2">Edit Profile</a>
 
           </div>
 
@@ -116,27 +112,23 @@
 
         <ul class="list-group">
 
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-
-            facebook.com/hebat1
-
-            <span class="badge badge-primary badge-pill"><a href="#" class="fa fa-facebook"></a></span>
+          <li  class="list-group-item d-flex justify-content-between small">
+            <input id ="fbLink" value="Link" disabled>
+            <p  class="badge badge-primary badge-pill mt-3"><a id= "fbLink" href="#" class="fa fa-facebook"></a></p>
 
           </li>
 
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-
-            @hebat1first_hebat
-
-            <span class="badge badge-primary badge-pill"><a href="#" class="fa fa-linkedin"></a></span>
+          <li class="list-group-item d-flex justify-content-between small ">
+            
+            <input id ="linkLink" value="Link" disabled>
+            <p  class="badge badge-primary badge-pill mt-3"><a id= "linkLink" href="#" class="fa fa-linkedin"></a></p>
 
           </li>
 
-          <li class="list-group-item d-flex justify-content-between align-items-center">
+          <li  class="list-group-item d-flex justify-content-between small">
 
-            facebook.com/hebat1
-
-            <span class="badge badge-primary badge-pill"><a href="#" class="fa fa-instagram"></a></span>
+            <input id ="instaLink" value="Link" disabled>
+            <p  class="badge badge-primary mt-3 badge-pill"><a id= "instaLink"href="#" class="fa fa-instagram"></a></p>
 
           </li>
 
@@ -152,33 +144,19 @@
 
       <ol class="list-group">
 
+        
+
         <li class="list-group-item d-flex justify-content-between align-items-center">
 
-          First Name
-
-          <p class="text-muted">Hebat</p>
+          Email <input id="profileEmail" class="text-muted" value = "Hebat@gmail.com" disabled>
 
         </li>
 
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-
-          Email <p class="text-muted">Hebat@gmail.com</p>
-
-        </li>
-
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-
-          Mobile
-
-          <p class="text-muted">709-222-2222</p>
-
-        </li>
-
-        <li class="list-group-item d-flex justify-content-between align-items-center">
+        <li  class="list-group-item d-flex justify-content-between align-items-center">
 
           Phone Number
 
-          <p class="text-muted">999-000-0000</p>
+          <input id="ProfilePhoneNumber" class="text-muted" value="999-000-0000" disabled>
 
         </li>
 
@@ -186,68 +164,34 @@
 
           Area
 
-          <p class="text-muted">Oakville, ON</p>
+          <input class="text-muted" value="Oakville, ON" disabled>
 
         </li>
 
       </ol>
 
+
+      <!-- Questions -->
       <div class="row mt-2">
 
-        <div class="col-5 mt-2">
+       
 
-          <ul class="list-group">
+        <div class="col-12 mt-2">
 
-            <li>
-              <h1>Questions</h1>
-            </li>
-
-            <li class="list-group-item">Cras justo odio</li>
-
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-
-            <li class="list-group-item">Morbi leo risus</li>
-
-            <li class="list-group-item">Porta ac consectetur ac</li>
-
-            <li class="list-group-item">Porta ac consectetur ac</li>
-
-            <li class="list-group-item">Vestibulum at eros</li>
-
-            <li><a class="btn"><u><b>More Requests</u></b></a></li>
-
-          </ul>
-
-        </div>
-
-        <div class="col-7 mt-2">
-
-          <ul class="list-group">
+          <ul  id="listingProduct"class="list-group">
 
             <li>
               <h1>LISTING</h1>
             </li>
-
-            <li class="list-group-item">Cras justo odio</li>
-
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-
-            <li class="list-group-item">Morbi leo risus</li>
-
-            <li class="list-group-item">Porta ac consectetur ac</li>
-
-            <li class="list-group-item">Vestibulum at eros</li>
-
-            <li class="list-group-item">Vestibulum at eros</li>
-
-            <li><a class="btn" href="listing.html"><u><b>Show My List</u></b></a></li>
-
           </ul>
 
         </div>
 
       </div>
 
+
+
+      <!-- Requests -->
       <div class="col-sm-2 mt-2">
 
       </div>
@@ -301,6 +245,9 @@
     </div>
 
   </footer>
+
+  <script src="../javascript/profilescript.js"></script>
+
 
 </body>
 
