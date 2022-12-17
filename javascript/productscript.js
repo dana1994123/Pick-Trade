@@ -10,7 +10,9 @@ window.onload = function() {
     //fetch this specific product details 
 
     console.log(productId, "product id")
+    document.getElementById("requestConfirmation").style.display ="none"
     getProductById(productId)
+
 
 
 
@@ -76,7 +78,13 @@ document.getElementById("requestContainer").addEventListener("click", function(e
             })
         })
         .then(response => response.json())
-        .then(data => console.log(data));
-    
+        .then(data => SendRequestSuccess(data));
   })
+
+
+  function SendRequestSuccess(data)
+  {
+    document.getElementById("requestBody").style.display = "none"
+    document.getElementById("requestConfirmation").style.display = "block"
+  }
 
