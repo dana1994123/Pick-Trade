@@ -55,6 +55,11 @@ document.getElementById("requestContainer").addEventListener("click", function(e
         console.log(e.target)
     }
   });
+  document.getElementById("checkProductRequests").addEventListener("click", function(e){
+    console.log(e.target.attributes[1].value)
+        e.target.href = `requests.html?ipd=${productId}`
+        console.log("dana")
+  });
 
 
   document.getElementById("cancelRequest").addEventListener("click" , function(e){
