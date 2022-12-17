@@ -53,3 +53,12 @@ document.getElementById("requestContainer").addEventListener("click", function(e
         console.log(e.target)
     }
   });
+
+
+  document.getElementById("cancelRequest").addEventListener("click" , function(e){
+    document.getElementById("requestBody").style.display = "none"
+  })
+  document.getElementById("cancelRequest2").addEventListener("click" , function(e){
+    document.getElementById("requestBody").style.display = "none"
+  })
+
