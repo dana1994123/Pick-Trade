@@ -62,3 +62,8 @@ document.getElementById("requestContainer").addEventListener("click", function(e
     document.getElementById("requestBody").style.display = "none"
   })
 
+  document.getElementById("sendRequest").addEventListener("click" , function(e){
+    //add the request to this specific product with this specific userName 
+    
+  })
+
