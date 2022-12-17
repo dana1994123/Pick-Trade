@@ -4,6 +4,7 @@ window.onload = function() {
 
     //http://127.0.0.1:5500/views/product.html?ipd=7aeb2600-7079-489b-a6f2-1293f9730b9a
     // we have the id in the url
+    document.getElementById("requestBody").style.display = "none"
     const url= window.location.href;
     productId = url.substring(45, 83);
     //fetch this specific product details 
@@ -37,3 +38,16 @@ async function getProductById(productId){
     
 
 }
+
+
+document.getElementById("requestContainer").addEventListener("click", function(e){
+    if(e.target.attributes[1].value == "requestBtn"){
+        //console.log(e.target.attributes[2].value)
+        // jsArray = e.target.attributes[2].value;
+        document.getElementById("requestBody").style.display = "block"
+       
+        e.preventDefault();
+        e.target.href = `..`
+        console.log(e.target)
+    }
+  });

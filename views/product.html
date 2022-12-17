@@ -1,115 +1,111 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../css/style.css" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
-  <link rel="stylesheet" href="../css/style.css" />
+    <title>Pick & Trade</title>
+  </head>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <body onload="loadSpecificProduct()">
+    <header class="mt-0 header col-sm-12 bg-footer">
+      <div>
+        <h1>Pick & Trade</h1>
 
-  <title>Pick & Trade</title>
+        <p>Level Up Your Closet</p>
+      </div>
 
-</head>
+      <div class="bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-<body onload="loadSpecificProduct()">
+          <div
+            class="collapse navbar-collapse navbar-dark bg-dark"
+            id="navbarText"
+          >
+            <ul class="navbar-nav mr-auto">
+              <li class="navbar-dark bg-dark nav-item">
+                <a class="nav-link" href="index.html"
+                  >Home <span class="sr-only"></span
+                ></a>
+              </li>
 
-  <header class="mt-0 header col-sm-12 bg-footer">
+              <li class="navbar-dark bg-dark nav-item">
+                <a class="nav-link" href="profile.html"
+                  >Profile <span class="sr-only"></span
+                ></a>
+              </li>
 
-    <div>
+              <li class="navbar-dark bg-dark nav-item">
+                <a class="nav-link" href="contactUs.html"
+                  >About Us<span class="sr-only"></span
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-      <h1>Pick & Trade</h1>
+    <div class="row mt-5 mb-5">
+      <div class="col-2"></div>
 
-      <p>Level Up Your Closet</p>
+      <div class="col-3 ml-3">
+        <img
+          class="card-img-top"
+          id="productImg"
+          src="../assets/images.png"
+          alt="Card image cap"
+        />
+      </div>
 
-    </div>
-
-    <div class="bg-dark">
-
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-
-          <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-        <div class="collapse navbar-collapse navbar-dark bg-dark" id="navbarText">
-
-          <ul class="navbar-nav mr-auto">
-
-            <li class="navbar-dark bg-dark nav-item ">
-
-              <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
-
-            </li>
-
-            <li class="navbar-dark bg-dark nav-item">
-
-              <a class="nav-link" href="profile.html">Profile <span class="sr-only"></span></a>
-
-            </li>
-
-            <li class="navbar-dark bg-dark nav-item ">
-
-              <a class="nav-link" href="contactUs.html">About Us<span class="sr-only"></span></a>
-
-            </li>
-
-          </ul>
-
+      <div class="col-sm-4">
+        <div class="row card card-title mt-3 p-3">
+          <h3 id="productTitle">Malak Zipper Front Modest Coat | Navy</h3>
         </div>
 
-      </nav>
+        <div class="row card card-body" id="requestContainer">
+          <p id="pPoint"><b>300 points</b></p>
 
-    </div>
+          <p id="productDescription">
+            Effortlessly stylish and classic, the Malak Zipper Front Modest Coat
+            is crafted from a sumptuously soft fabrication.<br />
+            In a zipper front silhouette, it is accented with an adjustable
+            waist design for a feminine finish. Excellent layered over
+            sophisticated separates, it will become a wardrobe go-to for the new
+            season.
+          </p>
 
-  </header>
+          <!-- add a request to this product using the profile information -->
+          <a href="" id="requestBtn" class="btn btn-outline-info"
+            >Make a Request</a
+          >
+        </div>
 
-  <div class=" row mt-5 mb-5">
-
-    <div class="col-2"></div>
-
-    <div class="col-3 ml-3">
-
-      <img class="card-img-top" id="productImg"
-        src="../assets/images.png"
-        alt="Card image cap" />
-
-    </div>
-
-    <div class="col-sm-4 ">
-
-      <div class="row card card-title mt-3 p-3">
-
-        <h3 id="productTitle">Malak Zipper Front Modest Coat | Navy </h3>
-
-      </div>
-
-      <div class="row card card-body">
-
-        <p id="pPoint"><b>300 points</b></p>
-
-        <p id="productDescription">Effortlessly stylish and classic, the Malak Zipper Front Modest Coat is crafted from a sumptuously soft
-          fabrication.<br> In a zipper front silhouette, it is accented with an adjustable waist design for a feminine
-          finish. Excellent layered over sophisticated separates, it will become a wardrobe go-to for the new season.
-        </p>
-
-
-        <!-- add a request to this product using the profile information -->
-        <a href="newItemToAdd.html" class="btn btn-outline-info">Make a Request</a>
-
-      </div>
-
-      <div class="row card card-title mt-3 p-3">
+        <!-- <div class="row card card-title mt-3 p-3">
 
         <form>
 
@@ -143,62 +139,87 @@
 
         </form>
 
+      </div> -->
       </div>
-
     </div>
 
-  </div>
+    <footer class="mt-0 footer bg-footer">
+      <div class="row bg-dark custom-footer-bg"></div>
 
-  <footer class="mt-0 footer bg-footer">
+      <div class="row bg-footer">
+        <div class="col-sm-4">
+          <img src="/assets/logo.png" height="200px" width="200px" />
+        </div>
 
-    <div class="row bg-dark custom-footer-bg">
+        <div class="col-sm-4">
+          <br />
 
-    </div>
+          <p class="text-light font-weight-bold align-middle">
+            Pick & Trade Services
+          </p>
 
-    <div class="row bg-footer">
+          <a class="nav-link text-light" href="#"
+            >Profile <span class="sr-only">(current)</span></a
+          >
 
-      <div class="col-sm-4">
+          <a class="nav-link text-light" href="listing.html"
+            >Listing<span class="sr-only">(current)</span></a
+          >
+        </div>
 
-        <img src="/assets/logo.png" height="200px" width="200px" />
+        <div class="col-sm-4">
+          <br />
 
+          <br />
+
+          <br />
+
+          <br />
+
+          <a
+            href="contactUs.html"
+            class="text-light mb-3 font-weight-bold align-middle"
+            >About US</a
+          >
+        </div>
       </div>
-
-      <div class="col-sm-4">
-
-        <br />
-
-        <p class="text-light font-weight-bold align-middle">
-
-          Pick & Trade Services
-
-        </p>
-
-        <a class="nav-link text-light" href="#">Profile <span class="sr-only">(current)</span></a>
-
-        <a class="nav-link text-light" href="listing.html">Listing<span class="sr-only">(current)</span></a>
-
+      <div id="requestBody"
+        class="ReactModal__Content ReactModal__Content--after-open"
+        tabindex="-1"
+        role="dialog"
+        aria-label="Example Modal"
+        aria-modal="true"
+        style="
+          position: absolute;
+          inset: 40px;
+          border: 1px solid rgb(204, 204, 204);
+          background: rgb(255, 255, 255);
+          overflow: auto;
+          border-radius: 4px;
+          outline: none;
+          padding: 20px;
+        ">
+        <div class="modal-header">
+          Request<button class="cross_icon2"><i class="fas fa-times"></i></button>
+        </div>
+          <br />
+          <div class="row">
+            <div class="col-6">
+              <div>
+                <p>
+                  Are you sure you want to make a request for this order? 
+                </p>
+              </div>
+            </div>
+            <div class="col-6">
+                <a class="btn  btn-info m-3 p-3" id ="sendRequest" >Yes</a>
+                <a class="btn  btn-info m-3 p-3" id ="cancelRequest" >No</a>
+            </div>
+          
+        </div>
       </div>
+    </footer>
 
-      <div class="col-sm-4">
-
-        <br />
-
-        <br />
-
-        <br />
-
-        <br />
-
-        <a href="contactUs.html" class="text-light mb-3 font-weight-bold align-middle">About US</a>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-  <script src="../javascript/productscript.js"></script>
-
-</body>
-
+    <script src="../javascript/productscript.js"></script>
+  </body>
 </html>
