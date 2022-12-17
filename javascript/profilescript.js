@@ -20,14 +20,15 @@ async function getProfileInfo(){
 };
 
 function populateProfileData(data){
-    console.log("dana dana :" , data)
+    console.log(data)
     document.getElementById("profileEmail").value = data.email;
     document.getElementById("ProfilePhoneNumber").value = data.phoneNumber;
     document.getElementById("fbLink").value = data.facebookLink;
     document.getElementById("instaLink").value = data.instaLink;
-    document.getElementById("linkLink").value = data.LinkedInLink;
+    document.getElementById("linkLink").value = data.linkinLink;
     document.getElementById("profileBio").value = data.bio;
-    document.getElementById("profileName").value = data.name
+    document.getElementById("profileName").value = data.name;
+    document.getElementById("profileImg").src = data.avatar;
 
     const list = document.getElementById("listingProduct");
     if (data.myListingProduct != null){
