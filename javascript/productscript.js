@@ -6,8 +6,10 @@ window.onload = function() {
     // we have the id in the url
     document.getElementById("requestBody").style.display = "none"
     const url= window.location.href;
-    productId = url.substring(45, 83);
+    productId = url.substring(56, 99);
     //fetch this specific product details 
+
+    console.log(productId, "product id")
     getProductById(productId)
 
 
@@ -47,7 +49,7 @@ document.getElementById("requestContainer").addEventListener("click", function(e
         document.getElementById("requestBody").style.display = "block"
        
         e.preventDefault();
-        e.target.href = `..`
+         e.target.href = `..`
         console.log(e.target)
     }
   });
