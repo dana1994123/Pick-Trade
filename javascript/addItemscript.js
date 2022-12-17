@@ -53,7 +53,7 @@ async function addNewListingToProfile(event){
     formData.append("questions",[])
     formData.append("requests",[])
 
-    await fetch("http://localhost:5251/api/product", {
+    await fetch("http://localhost:5052/api/product", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
