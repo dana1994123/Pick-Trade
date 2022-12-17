@@ -89,7 +89,7 @@
           class="form-control"
           id="productName"
           placeholder="Enter item name"
-        />
+          required/>
       </div>
 
       <div class="form-group">
@@ -99,11 +99,13 @@
           id="productDescreption"
           rows="3"
           placeholder="Enter item description"
-        ></textarea>
+          required></textarea>
       </div>
+<div class="row">
 
-      <div class="form-group">
-        <label for="productDescreption" class="mt-4">Choose the category*</label>
+
+      <div class="form-group col-sm-6">
+        <label for="productDescreption" class="mt-4 ">Choose the category*</label>
         <select class="form-control">
           <option>Pants</option>
           <option>Tops</option>
@@ -111,11 +113,19 @@
           <option>Accessory</option>
         </select>
       </div>
+      <div class="form-group col-sm-6">
+        <label for="productPoints" class="mt-4 ">Point Cost*</label>
+        <input type="number" class="form-control"id="productPoints"placeholder="Enter item cost"required/>
+
+      </div>
+      </div>
+
 
       <div class="row dotted col-sm-12 mt-5 ml-1 text-secondary">
         <div class="form-group ">
-            <label for="choosePicture" class="mt-2 text-dark">Media*</label>
-            <input type="file" class="form-control-file" id="choosePicture" />
+            <label for="choosePicture" class="mt-2 text-dark">Media*</label><br>
+            <input accept="image/*" type="file" class="form-control-file" id="imgInp" required accept=".jpg , .png" required />
+            <img id="previewProduct" src="" alt="" height="150px" width="150px"/> 
           </div>
 
     </div>
@@ -125,8 +135,7 @@
 
         <div class="col-sm-5"><p></p></div>
         <div class="col-sm-3">
-            <button type="submit" class="btn btn-info mt-5 mb-5 btnAdd">Add Item</button>
-    
+            <button id="addNewListing"type="submit" class="btn btn-info mt-5 mb-5 btnAdd">Add Item</button>                
         </div>
 
     </div>
@@ -171,5 +180,6 @@
         </div>
       </div>
     </footer>
+    <script src="../javascript/addItemscript.js"></script>
   </body>
 </html>
