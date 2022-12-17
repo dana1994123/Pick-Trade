@@ -30,7 +30,7 @@ function populateRequests(data){
         console.log(element)
 
         var item = document.createElement("li")
-        item.innerHTML = `${element.userName} Order this product`
+        item.innerHTML = `${element.userName} Requested this product`
         reqList.appendChild(item);   
     });
 

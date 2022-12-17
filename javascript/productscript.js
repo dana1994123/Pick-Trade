@@ -71,14 +71,14 @@ document.getElementById("requestContainer").addEventListener("click", function(e
 
   document.getElementById("sendRequest").addEventListener("click" , async function(e){
     //add the request to this specific product with this specific userName
-    await fetch("http://localhost:5052/api/Request/d5aacc5b-dd24-40bd-8682-1da810116b57", {
+    await fetch(`http://localhost:5052/api/Request/${productId}`, {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
                 "content-type": "application/json"
             },
             body: JSON.stringify({
-                "username": "Dana",
+                "username": "Aeiman Gadafi",
                 "isaccepted": false
             })
         })
