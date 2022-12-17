@@ -148,7 +148,7 @@ function populateProfileData(data){
                 "bio": document.getElementById("profileBio").value,
                 "email":document.getElementById("profileEmail").value,
                 "mobile":"" ,
-                "avatar":"https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg",
+                "avatar": "https://cdn-icons-png.flaticon.com/512/2490/2490505.png",
                 "PhoneNumber": document.getElementById("ProfilePhoneNumber").value,
                 "facebookLink": document.getElementById("fbLink").value, 
                 "linkinLink":document.getElementById("linkLink").value,
