@@ -31,33 +31,46 @@ function populateProfileData(data){
     document.getElementById("profileImg").src = data.avatar;
 
     const list = document.getElementById("listingProduct");
-    if (data.myListingProduct != null){
         //create li for 4 items or less otherwise we need to show it in more details
-        if(data.myListingProduct.length <= 6){
-            for(let i = 0 ; i < 6 ; i++ ){
+        console.log(data.myListingProduct.length)
+
+
+
+
+        if(data.myListingProduct.length > 0 ){
+            data.myListingProduct.forEach(element => {
                 const li = document.createElement('li');
                 li.classList.add("list-group-item");
-                li.innerHTML = "Add something about product"
+                li.innerHTML = element.name
                 list.appendChild(li);
-            }
-
+            })
         }
 
 
-        const moreDetails = document.createElement("li");
-        const btnMoreDetails = document.createElement("a");
-        btnMoreDetails.classList.add("btnMoreDetails");
-        btnMoreDetails.innerHTML = "See More";
-        moreDetails.appendChild(btnMoreDetails);
-        list.appendChild(moreDetails);
-    }
-    else{
-        const li = document.createElement('p');
-        li.classList.add("list-group-item");
-        li.innerHTML = "There is no Listing yet"
-        list.appendChild(li);
+        else{
+            const li = document.createElement('p');
+            li.classList.add("list-group-item");
+            li.innerHTML = "There is no Listing yet"
+            list.appendChild(li);
+    
+        }
+        
+        // const moreDetails = document.createElement("li");
+        // const btnMoreDetails = document.createElement("a");
+        // btnMoreDetails.classList.add("btnMoreDetails");
+        // btnMoreDetails.innerHTML = "See More";
+        // btnMoreDetails.href="lis"
+        // moreDetails.appendChild(btnMoreDetails);
+        // list.appendChild(moreDetails);
+    
+    
+       
 
-        const addListingBtn = document.createElement("a");
+        
+    
+
+
+    const addListingBtn = document.createElement("a");
         addListingBtn.innerHTML = "Add new Listing"; 
         addListingBtn.classList.add("btn");
         addListingBtn.classList.add("btn-info");
@@ -65,7 +78,6 @@ function populateProfileData(data){
         addListingBtn.href = "newItemToAdd.html"
 
         list.appendChild(addListingBtn);
-    }
 
 
 
