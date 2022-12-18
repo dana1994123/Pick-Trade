@@ -61,7 +61,7 @@ async function addNewListingToProfile(event){
               "description":document.getElementById("productDescreption").value,
               "image" :document.getElementById("productImage").value,
               "pointCost" : +document.getElementById("productPoints").value,
-              "owner": "Aeiman Ghadafi",
+              "owner": "Aeiman Gadafi",
               "requests" : []
 
           })

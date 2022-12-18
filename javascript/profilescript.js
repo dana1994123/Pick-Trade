@@ -19,7 +19,7 @@ async function getProfileInfo(){
     .then(data => populateProfileData(data));
 };
 
-function populateProfileData(data){
+async function populateProfileData(data){
     console.log(data)
     document.getElementById("profileEmail").value = data.email;
     document.getElementById("ProfilePhoneNumber").value = data.phoneNumber;
@@ -33,6 +33,16 @@ function populateProfileData(data){
     const list = document.getElementById("listingProduct");
         //create li for 4 items or less otherwise we need to show it in more details
         console.log(data.myListingProduct.length)
+
+
+        await fetch("http://localhost:5052/api/profile/specificProfileProduct", {
+            method: "GET",
+            headers: {
+                "content-type": "application/json"
+            }
+        })
+    .then(response => response.json())
+    .then(data => console.log(data));
 
 
 
