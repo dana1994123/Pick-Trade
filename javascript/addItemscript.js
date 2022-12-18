@@ -1,5 +1,4 @@
 window.onload = function() {
-    document.getElementById("previewProduct").style.display = 'none'
     console.log(window.location.href)//http://127.0.0.1:5500/views/newItemToAdd.html
     //we need to add the image from this path to this path 
     //http://127.0.0.1:5500/assets/
@@ -35,49 +34,57 @@ async function addNewListingToProfile(event){
 
     //const imgInpt = document.getElementById("imgInpt").files
     //get the new product information and add them to the listing
-    console.log(document.getElementById("previewProduct").src)
     const formData = new FormData();
    
     //formData.append("image", newbyte)
 
     //we need to convert this file into bytes: 
-    const byteFile = await getAsByteArray(imgInp.files[0])
+    // const byteFile = await getAsByteArray(imgInp.files[0])
 
 
-    console.log(byteFile)
-    formData.append('name', "Kiara Knot Waist Modest Dress | Purple"  )
-    formData.append("description","The silhouette of the Kiara Knot Waist Modest Dress flourishes in its simplicity")
-    formData.append("image" , byteFile)
-    formData.append("pointCost",350)
-    formData.append("owner","Rahimah")
-    formData.append("questions",[])
-    formData.append("requests",[])
+    // console.log(byteFile)
+    // formData.append('name', document.getElementById("productName").value )
+    // formData.append("description",document.getElementById("productDescreption").value)
+    // formData.append("image" ,document.getElementById("productImage").value)
+    // formData.append("pointCost",document.getElementById("productPoints").value)
+    // formData.append("owner","Aeiman Ghadafi")
+    // formData.append("requests",[])
 
     await fetch("http://localhost:5052/api/product", {
             method: "POST",
             headers: {
+              'Accept': 'application/json',
                 "content-type": "application/json"
             },
-            body: formData
+            body: JSON.stringify({
+              'name': document.getElementById("productName").value ,
+              "description":document.getElementById("productDescreption").value,
+              "image" :document.getElementById("productImage").value,
+              "pointCost" : +document.getElementById("productPoints").value,
+              "owner": "Aeiman Ghadafi",
+              "requests" : []
+
+          })
         })
         .then(response => response.json())
-         .then(data => console.log(data));
+         .then(data => alert("Product Been Added successfully"))
 
 }
 
-imgInp.onchange = evt => {
-    const [file] = imgInp.files
-    if (file) {
-        if(previewProduct.style.display == "none"){
-            previewProduct.style.display = "block";
-        }
+// imgInp.onchange = evt => {
+//     const [file] = imgInp.files
+//     if (file) {
+//         if(previewProduct.style.display == "none"){
+//             previewProduct.style.display = "block";
+//         }
 
+//         console.log(file)
         
-        previewProduct.src = URL.createObjectURL(file)
+//         previewProduct.src = URL.createObjectURL(file)
 
-        console.log(previewProduct.src);
-    }
-  }
+//         console.log(previewProduct.src);
+//     }
+//   }
 
   
 
