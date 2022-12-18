@@ -4,6 +4,8 @@ window.onload = function() {
 
 
     document.getElementById("saveBtn").style.display = "none"
+
+    
     getProfileInfo(); 
 
 }
@@ -17,10 +19,16 @@ async function getProfileInfo(){
 })
     .then(response => response.json())
     .then(data => populateProfileData(data));
+
+
 };
 
 async function populateProfileData(data){
     console.log(data)
+
+    
+
+
     document.getElementById("profileEmail").value = data.email;
     document.getElementById("ProfilePhoneNumber").value = data.phoneNumber;
     document.getElementById("fbLink").value = data.facebookLink;
@@ -31,39 +39,44 @@ async function populateProfileData(data){
     document.getElementById("profileImg").src = data.avatar;
 
     const list = document.getElementById("listingProduct");
-        //create li for 4 items or less otherwise we need to show it in more details
-        console.log(data.myListingProduct.length)
-
-
-        await fetch("http://localhost:5052/api/profile/specificProfileProduct", {
-            method: "GET",
-            headers: {
-                "content-type": "application/json"
-            }
-        })
-    .then(response => response.json())
-    .then(data => console.log(data));
-
-
-
-
-        if(data.myListingProduct.length > 0 ){
-            data.myListingProduct.forEach(element => {
-                const li = document.createElement('li');
-                li.classList.add("list-group-item");
-                li.innerHTML = element.name
-                list.appendChild(li);
-            })
-        }
-
-
-        else{
-            const li = document.createElement('p');
-            li.classList.add("list-group-item");
-            li.innerHTML = "There is no Listing yet"
-            list.appendChild(li);
+    //create li for 4 items or less otherwise we need to show it in more details
     
-        }
+
+
+       
+
+
+    await fetch("http://localhost:5052/api/product/Listing", {
+    method: "GET",
+    headers: {
+        "content-type": "application/json"
+    }
+})
+    .then(response => response.json())
+    .then(data => listingData(data));
+
+
+
+    
+        
+    
+    
+    
+    
+
+
+    const addListingBtn = document.createElement("a");
+    addListingBtn.innerHTML = "Add new Listing"; 
+    addListingBtn.classList.add("btn");
+    addListingBtn.classList.add("btn-info");
+    addListingBtn.classList.add("mt-4");
+    addListingBtn.href = "newItemToAdd.html"
+    list.appendChild(addListingBtn);
+
+        
+
+
+       
         
         // const moreDetails = document.createElement("li");
         // const btnMoreDetails = document.createElement("a");
@@ -80,14 +93,7 @@ async function populateProfileData(data){
     
 
 
-    const addListingBtn = document.createElement("a");
-        addListingBtn.innerHTML = "Add new Listing"; 
-        addListingBtn.classList.add("btn");
-        addListingBtn.classList.add("btn-info");
-        addListingBtn.classList.add("mt-4");
-        addListingBtn.href = "newItemToAdd.html"
-
-        list.appendChild(addListingBtn);
+   
 
 
 
@@ -187,3 +193,28 @@ async function populateProfileData(data){
 
     // <li><a class="btn"><u><b>More Requests</u></b></a></li>
 }
+function listingData(data){
+    console.log(data.length)
+    if(data.length > 0 ){
+        data.forEach(element => {
+            const li = document.createElement('li');
+            li.classList.add("list-group-item");
+            li.innerHTML = ` Product Name: ${element.name}`
+            document.getElementById("listingProduct").appendChild(li);
+        })
+    }
+    else{
+        const li = document.createElement('p');
+        li.classList.add("list-group-item");
+        li.innerHTML = "There is no Listing yet"
+        document.getElementById("listingProduct").appendChild(li);
+
+    }
+
+}
+
+
+
+
+
+
