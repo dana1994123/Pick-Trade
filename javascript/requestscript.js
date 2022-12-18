@@ -2,7 +2,7 @@
 var productId = "";
 window.onload = function() {
     const url= window.location.href;
-    productId = url.substring(57, 99);
+    productId = url.substring(46, 99);
     //fetch this specific product details 
     console.log(productId)
     getRequestList(productId)

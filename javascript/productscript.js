@@ -1,27 +1,29 @@
-
 window.onload = function() {
     //jsArray = JSON.parse(sessionStorage.getItem("jsArray"));
 
     //http://127.0.0.1:5500/views/product.html?ipd=7aeb2600-7079-489b-a6f2-1293f9730b9a
     // we have the id in the url
     document.getElementById("requestBody").style.display = "none"
+    document.getElementById("requestConfirmation").style.display ="none"
+    
     const url= window.location.href;
-    productId = url.substring(56, 99);
+    productId = url.substring(45, 81);
+    console.log(url)
     //fetch this specific product details 
 
     console.log(productId, "product id")
-    document.getElementById("requestConfirmation").style.display ="none"
+
+
     getProductById(productId)
 
-
-
-
     
+     
+    
+ 
 };
 
 
 async function getProductById(productId){
-    console.log(productId)
     await fetch(`http://localhost:5052/api/product/${productId}`, {
     method: "GET",
     headers: {
@@ -31,7 +33,11 @@ async function getProductById(productId){
     .then(response => response.json())
     .then(data => populateSpecificProductData(data));
 
-  }
+
+}
+
+
+   
 
   function populateSpecificProductData(data){
     console.log(data)
@@ -39,8 +45,6 @@ async function getProductById(productId){
     document.getElementById("productTitle").innerHTML = data.name
     document.getElementById("pPoint").innerHTML = `${data.pointCost} POINTS`
     document.getElementById("productDescription").innerHTML = data.description
-    
-
 }
 
 
